@@ -39,7 +39,6 @@ var path = d3.geo.path()
 d3.json("map.json", function(error, map) {
   svg.selectAll(".land")
       .data(topojson.feature(map, map.objects.land).features)
-    .enter().append("path")
       .enter().append("path") 
       .attr("class", "map") 
       .attr("d", path);
